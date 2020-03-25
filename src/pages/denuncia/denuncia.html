@@ -1,0 +1,70 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col class="fontawesome">
+          <i class="fas fa-bars" menuToggle></i>
+        </ion-col>
+        <ion-col style="text-align: center">
+          GuardianCity <br>
+          <span> #LibresDeCorrupción
+
+          </span>
+        </ion-col>
+        <ion-col>
+        </ion-col>
+      </ion-row>
+
+
+    </ion-grid>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <section class="titulo">
+    <h1>DENUNCIA</h1>
+    <p>HAGAMOS UNA CIUDAD MEJOR</p>
+  </section>
+  <section class="denuncia">
+    <div class="imagen">
+      <img src="assets/img/security-man.png">
+    </div>
+    <div class="cuadro">
+      <form action="" class="campos">
+        <ion-item class="fecha">
+          <ion-label><i class="fas fa-calendar"></i></ion-label>
+          <ion-input placeholder="Ingrese la fecha" type="date" [(ngModel)]="account.date" name="email"></ion-input>
+        </ion-item>
+
+        <ion-item class="hora">
+          <ion-label><i class="fas fa-clock"></i></ion-label>
+          <ion-input placeholder="Ingrese la hora" type="email" [(ngModel)]="account.time" name="email"></ion-input>
+        </ion-item>
+        <ion-item class="lugar">
+          <ion-label><i class="fas fa-map"></i></ion-label>
+          <ion-input placeholder="Ingrese el lugar" type="email" [(ngModel)]="account.place" name="email"></ion-input>
+        </ion-item>
+        <ion-item class="casos">
+          <select name="select" class="casos" [(ngModel)] = "account.tipo" >
+
+            <option value="primero">
+              <i class="fas fa-map"></i>Seleccionar
+            </option>
+            <option value="asalto">Asalto</option>
+            <option value="violacion">Violación</option>
+            <option value="corrupcion">Corrupción</option>
+          </select></ion-item>
+        <ion-item class="descripcion">
+          <ion-label><i class="fas fa-book"></i></ion-label>
+          <ion-input placeholder="¿Qué sucedio?" type="email" [(ngModel)]="account.descripcion" name="email"></ion-input>
+        </ion-item>
+        <div padding>
+          <button ion-button class = "boton" >{{ 'LOGIN_BUTTON' | translate }}</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</ion-content>
